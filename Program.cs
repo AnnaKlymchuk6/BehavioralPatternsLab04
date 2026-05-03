@@ -1,4 +1,5 @@
 ﻿using BehavioralPatternsLab.ChainOfResponsibility;
+using BehavioralPatternsLab.Mediator;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +38,23 @@ namespace BehavioralPatternsLab
 					Console.WriteLine("\nНе вдалося визначити проблему. Спробуйте ще раз");
 				}
 			}
+
+			Console.WriteLine("Завдання 2: Посередник");
+			var runways = new List<Runway>{
+				new Runway(),
+				new Runway()
+			};
+
+			var mediator = new CommandCentre(runways);
+
+			var aircraft1 = new Aircraft("Boeing 737", mediator);
+			var aircraft2 = new Aircraft("Airbus A320", mediator);
+
+			aircraft1.Land();
+			aircraft2.Land();
+
+			aircraft1.TakeOff();
+			aircraft2.TakeOff();
 		}
 	}
 }

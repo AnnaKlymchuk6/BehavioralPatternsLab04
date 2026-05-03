@@ -48,6 +48,10 @@
     <Compile Include="ChainOfResponsibility\OperatorSupport.cs" />
     <Compile Include="ChainOfResponsibility\SupportHandler.cs" />
     <Compile Include="ChainOfResponsibility\TechnicalSupport.cs" />
+    <Compile Include="Mediator\Aircraft.cs" />
+    <Compile Include="Mediator\IMediator.cs" />
+    <Compile Include="Mediator\CommandCentre.cs" />
+    <Compile Include="Mediator\Runway.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
