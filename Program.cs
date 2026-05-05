@@ -1,5 +1,6 @@
 ﻿using BehavioralPatternsLab.ChainOfResponsibility;
 using BehavioralPatternsLab.Mediator;
+using BehavioralPatternsLab.Memento;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,7 +40,7 @@ namespace BehavioralPatternsLab
 				}
 			}
 
-			Console.WriteLine("Завдання 2: Посередник");
+			Console.WriteLine("\nЗавдання 2: Посередник");
 			var runways = new List<Runway>{
 				new Runway(),
 				new Runway()
@@ -55,6 +56,28 @@ namespace BehavioralPatternsLab
 
 			aircraft1.TakeOff();
 			aircraft2.TakeOff();
+
+
+			Console.WriteLine("\nЗавдання 5: Мементо");
+
+			var editor = new TextEditor();
+
+			editor.Write("Привіт ");
+			editor.Show();
+
+			editor.Write("світ!");
+			editor.Show();
+
+			Console.WriteLine("Скасування:");
+			editor.Undo();
+			editor.Show();
+
+			Console.WriteLine("Повторне скасування:");
+			editor.Undo();
+			editor.Show();
+
+			Console.WriteLine("Повторне скасування:");
+			editor.Undo();
 		}
 	}
 }

@@ -52,6 +52,9 @@
     <Compile Include="Mediator\IMediator.cs" />
     <Compile Include="Mediator\CommandCentre.cs" />
     <Compile Include="Mediator\Runway.cs" />
+    <Compile Include="Memento\DocumentMemento.cs" />
+    <Compile Include="Memento\TextDocument.cs" />
+    <Compile Include="Memento\TextEditor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
